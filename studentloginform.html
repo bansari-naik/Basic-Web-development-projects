@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .log{
+            margin-bottom: 15px;
+        }
+        .log label {
+            display: block;
+            font-weight: bold;
+        }
+        .log input, .log select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-btn:hover {
+            background-color: blue ;
+        }
+        .register-link {
+            text-align: center;
+        }
+        
+        .register-link a:hover {
+            color:blue
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Student Login</h2>
+        <form>
+            <div class="log">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="log">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="log">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" required>
+            </div>
+            <div class="log">
+                <label for="department">Department</label>
+                <select id="department" name="department" title="Select">
+                    <option value="">Select Department</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="electrical-engineering">Electrical Engineering</option>
+                    <option value="mechanical-engineering">Mechanical Engineering</option>
+                    <option value="civil-engineering">Artificial Intelligence and Machine Learning</option>
+                    <option value="civil-engineering">Artificial Intelligence and Data Science</option>
+                    <option value="information technology">Information Technology</option>
+                </select>
+            </div>
+            <div class="log">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
