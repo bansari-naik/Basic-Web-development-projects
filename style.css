@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start; /* ⬅ allow scrolling from top */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    background-color: #1e1e1e;
+    width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    height: 1200px;/* ⬅ make content stack vertically */
+}
+
+
+.header {
+    display: flex;
+    justify-content: center; /* Center align header */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    color: pink;
+}
+
+#toggleTheme {
+    background-color: lightblue;
+    color: #1e1e1e;
+    border: none;
+    padding: 8px 16px;
+    border-radius: px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#toggleTheme:hover {
+    background-color: orange;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center; /* Align inputs to center */
+}
+
+input, select, button {
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    width: 100%; /* Stretch across container */
+}
+
+input, select {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    background-color: lightblue;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+/* Time */
+#time {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+/* Task Section */
+.task-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.active-tasks, .completed-tasks {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Button Styling */
+.complete-btn, .edit-btn, .delete-btn {
+    background-color: orange;
+    color: #1e1e1e;
+    border: none;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.complete-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    background-color: lightgreen;
+}
+
+.edit-btn {
+    background-color: red;
+}
+
+.delete-btn {
+    background-color: pink;
+}
+
+.drag-handle {
+    cursor: grab;
+    font-size: 20px;
+    margin-right: 10px;
+}
